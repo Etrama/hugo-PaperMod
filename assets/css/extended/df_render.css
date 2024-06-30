@@ -1,0 +1,99 @@
+/* static/css/df_render.css */
+body .dataframe,
+body table.dataframe {
+    border-collapse: collapse !important;
+    width: 100%;
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+    background-color: rgb(19, 20, 21) !important;  /* Set background color using RGB */
+    overflow-x: auto !important;
+    display: block !important;
+    border: none !important;
+    font-size: 15px !important;
+    table-layout: fixed; /* Enable fixed width layout */
+}
+
+/* Style all data cells (td) */
+body .dataframe tbody td,
+body table.dataframe tbody td {
+    padding: 00.0rem 0.3rem 0.0rem 0.0rem !important; /* Reduce padding slightly */
+    vertical-align: middle !important; /* Vertically center content */
+    text-align: right !important; /* Left alignment by default */
+    font-family: Arial, Helvetica, sans-serif !important;
+    border: none !important;
+    font-size: 14px !important;
+}
+
+/* Style header cells (th) */
+body .dataframe thead th,
+body table.dataframe thead th {
+    padding: 0.05rem 0.4rem 0.05rem 0.0rem !important; /* Reduce padding slightly */
+    vertical-align: middle !important; /* Vertically center content */
+    text-align: right !important;  /* Centered text for headers */
+    font-weight: bold !important;
+    background-color: rgb(47, 47, 47) !important; /* Lighter background for headers */
+    color: #F2F2F2 !important; /* Greyish white font color */
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    border: none; /* Remove incorrect border rule */
+}
+
+body .dataframe tbody tr th,  /* Target body row headers too */
+body table.dataframe tbody tr th {
+    padding: 0px !important; /* Reduce padding slightly */
+    vertical-align: middle !important; /* Vertically center content */
+    text-align: center !important;  /* Centered text for headers */
+    /* font-weight: bold !important; */
+    color: #F2F2F2 !important; /* Greyish white font color */
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    border: none !important; /* Remove incorrect border rule */
+    /* Minimum width for content */
+    min-width: 1ch  !important;
+    /* Flexbox properties for proportional distribution */
+    max-width: 3ch !important;
+    width: 2ch !important;
+    white-space: nowrap; /* Prevent content from wrapping to multiple lines */
+    overflow: hidden; /* Hide content that overflows the cell width */
+    text-overflow: ellipsis; /* Add ellipsis (...) if content overflows */
+}
+
+/* Style data rows (tr) with alternating background colors */
+body .dataframe tbody tr:nth-child(odd) {
+    background-color: rgb(31, 31, 31) !important;
+}
+
+body .dataframe tbody tr:nth-child(even) {
+    background-color: rgb(39, 39, 39) !important;
+}
+
+
+/* Optional: Right-align specific cell content */
+.dataframe .right-align {
+    text-align: right !important;
+}
+
+/* More specific selector for the first column */
+body .dataframe tbody tr td:first-child,
+body table.dataframe tbody tr td:first-child {
+    padding: 0px !important; /* Reduce padding slightly */
+    vertical-align: middle !important; /* Vertically center content */
+    text-align: center !important; /* Center text for headers */
+    /* font-weight: bold !important; */
+    color: #F2F2F2 !important; /* Greyish white font color */
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    border: none !important; /* Remove incorrect border rule */
+    min-width: 1ch !important; /* Force minimum width */
+    max-width: 4ch !important;
+    width: 2ch !important; /* Optional, set a fixed width */
+    flex: 0 0 auto; /* Prevent flexing and maintain width */
+}
+
+.dataframe thead tr th:first-child,
+.dataframe tbody tr th:first-child {
+    width: 3ch; /* Set fixed width (adjust as needed) */
+    min-width: 2ch; /* Minimum width for content */
+    max-width: 4ch; /* Maximum width to prevent overflowing */
+    word-break: break-all; /* Allow content to break across lines if needed */
+}
