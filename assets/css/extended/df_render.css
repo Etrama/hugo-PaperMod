@@ -97,3 +97,5 @@ body table.dataframe tbody tr td:first-child {
     max-width: 4ch; /* Maximum width to prevent overflowing */
     word-break: break-all; /* Allow content to break across lines if needed */
 }
+
+/* dummy line for commit */
